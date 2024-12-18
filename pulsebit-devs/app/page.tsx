@@ -1,12 +1,14 @@
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import CardLayout from './components/CardLayout/CardLayout'
+import Banner from './components/Banner/Banner'
+import AutoScrollingCarousel from './components/AutoScrollingCarousel/AutoScrollingCarousel'
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <main className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Column */}
           <div className="space-y-6">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl">
@@ -33,6 +35,8 @@ export default function Home() {
           </div>
         </div>
         <CardLayout />
+        <Banner />
+        <AutoScrollingCarousel />
       </main>
     </div>
   )
